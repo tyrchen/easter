@@ -25,3 +25,24 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+# django static
+static/*
+
+# db
+*.db*
+
+# pycharm
+.idea
+
+# logs
+log/*
+
+# migrations
+cayman/migrations/*
+
+#dict
+*.dict
+
+#tmp
+tmp/*

@@ -1,4 +1,4 @@
 easter
-======
+====
 
-Easter is an independent project for tracking and displaying user behavior.
+Easter is an internal project for tukeq.com for tracking user behavior.

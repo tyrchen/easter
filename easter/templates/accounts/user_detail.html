@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{{ profile.user.get_full_name }}的档案{% endblock %}
+{% block css %}
+<style type="text/css">
+  {{ template_info.style }}
+</style>
+{% endblock %}
+{% block bodyattr %}class="profilepage" id="id-body"{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="span6">
+    <div class="profile">
+      <div class="head">
+        <h1 class="name">{{ user.get_full_name }}</h1>
+        <h2 class="headline">{{ profile.philosophy }}</h2>
+        <img src="{{ profile.get_avatar }}" />
+        <div class="content">
+          <div class="bio">
+            {{ profile.bio }}
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+  <div class="span6">
+    <div class="profile-box">
+      <h2>发布的活动</h2>
+      <ul>
+        {% for activity in activities %}
+          <li><a href="{% url activity_detail activity.pk %}">{{ activity.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="profile-box">
+      <h2>参加的活动</h2>
+      <ul>
+        {% for order in orders %}
+          <li><a href="{% url activity_detail order.activity.pk %}">{{ order.activity.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="profile-box">
+      <h2>最近的评价</h2>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
+
+{% block script %}
+  <script type="text/javascript">
+    $(function() {
+      var width = $(window).width();
+      var background = "{{ img_cdn_domain }}{{ template_info.image }}";
+      if (width <= 1024) {
+        background += '!1024';
+      } else if (width <= 1280) {
+        background += '!1280';
+      } else if (width <= 1440) {
+        background += '!1440';
+      }  else if (width <= 1680) {
+        background += '!1680';
+      }
+      console.log(background);
+      $('body').css('background-image', 'url(' + background + ')');
+    });
+  </script>
+{% endblock %}
