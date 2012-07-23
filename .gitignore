@@ -30,7 +30,7 @@ pip-log.txt
 static/*
 
 # db
-*.db*
+*.db
 
 # pycharm
 .idea
