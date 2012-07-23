@@ -39,7 +39,7 @@ static/*
 log/*
 
 # migrations
-cayman/migrations/*
+easter/migrations/*
 
 #dict
 *.dict
