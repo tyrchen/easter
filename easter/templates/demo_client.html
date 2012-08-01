@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block head_more %}
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+    <style type="text/css">
+      label { display: inline-block; width: 50px; }
+    </style>
+{% endblock %}
+{% block content %}
+  <form>
+    <p>
+      <label for="app_id">app_id</label>
+      <input type="text" id="app_id" value="test_app"/>
+    </p>
+    <p>
+      <label for="event">event</label>
+      <input type="text" id="event" value="sns_share"/>
+    </p>
+    <p>
+      <label for="uid">uid</label>
+      <input type="text" id="uid" value="yejinxin"/>
+    </p>
+    <p>
+      <label for="origin">origin</label>
+      <input type="text" id="origin" value="1"/>
+    </p>
+    <p>
+      <label for="level">level</label>
+      <input type="text" id="level" value="1"/>
+    </p>
+    <p>
+      <label for="text">text</label>
+      <input type="text" id="text" value="快羊羊分享了一个clip到新浪微博"/>
+    </p>
+    <p>
+      <label for="data">data</label>
+      <textarea id="data">{"sns":"weibo", "board":"board1", "tags":["taga", "tagb", "tagc"]}</textarea>
+    </p>
+    <input type="button" id="upload" value="确定"/>
+    <textarea rows="2" cols="50" id="response"></textarea>
+  </form>
+<script type="text/javascript">
+  $(function() {
+    $('#upload').click(function() {
+      var json_obj = [{
+        app_id: $('#app_id').val(),
+        time: (new Date()).valueOf()/1000.0,
+        event: $('#event').val(),
+        uid: $('#uid').val(),
+        origin: $('#origin').val(),
+        level: $('#level').val(),
+        text: $('#text').val(),
+        data: JSON.parse($('#data').val())
+//        data: {
+//          sns: 'weibo',
+//          board: 'board1',
+//          tags: ['tag1', 'tag2', 'tag3']
+//        }
+      }]; //JSON对象
+
+      var json_str = JSON.stringify(json_obj);    //将JSON对象转变成JSON格式的字符串
+      $.post("/event/", json_str, callback, "json");
+    })
+
+    function callback(json){
+      $('#response').html('code:' + json.code + '\tmsg:"' + json.msg + '"');
+    }
+  })
+</script>
+{% endblock %}

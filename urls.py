@@ -3,6 +3,7 @@ from django.conf.urls import patterns, include, url
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 from easter.views.accounts import UserCreateView
+from easter.views.event import EventView, TestClientView
 from settings import STATIC_ROOT
 from django.views.generic import TemplateView
 
@@ -15,6 +16,8 @@ urlpatterns = patterns('',
   url(r'^logout/$', 'django.contrib.auth.views.logout', name='logout'),
   url(r'^signup/$', UserCreateView.as_view()),
   url(r'^account/', include('easter.urls.accounts')),
+  url(r'^event/', EventView.as_view(), name='event'),
+  url(r'^demo/', TestClientView.as_view(), name='demo_view'),
   # Uncomment the admin/doc line below to enable admin documentation:
   url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
