@@ -32,5 +32,5 @@ class EventForm(forms.Form):
       raise forms.ValidationError('data field is invalid')
     return ret
 
-  def clean_uid(self):
-    pass
+#  def clean_uid(self):
+#    pass

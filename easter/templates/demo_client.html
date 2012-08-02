@@ -41,7 +41,7 @@
 <script type="text/javascript">
   $(function() {
     $('#upload').click(function() {
-      var json_obj = [{
+      var json_obj = {
         app_id: $('#app_id').val(),
         time: (new Date()).valueOf()/1000.0,
         event: $('#event').val(),
@@ -55,7 +55,7 @@
 //          board: 'board1',
 //          tags: ['tag1', 'tag2', 'tag3']
 //        }
-      }]; //JSON对象
+      }; //JSON对象
 
       var json_str = JSON.stringify(json_obj);    //将JSON对象转变成JSON格式的字符串
       $.post("/event/", json_str, callback, "json");
