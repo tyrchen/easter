@@ -4,6 +4,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from easter.views.accounts import UserCreateView
 from easter.views.event import EventView, TestClientView
+from easter.views.query import QueryView
 from settings import STATIC_ROOT
 from django.views.generic import TemplateView
 
@@ -18,6 +19,7 @@ urlpatterns = patterns('',
   url(r'^account/', include('easter.urls.accounts')),
   url(r'^event/', EventView.as_view(), name='event'),
   url(r'^demo/', TestClientView.as_view(), name='demo_view'),
+  url(r'^query/', QueryView.as_view(), name='query'),
   # Uncomment the admin/doc line below to enable admin documentation:
   url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

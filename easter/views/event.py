@@ -5,12 +5,11 @@ from __future__ import unicode_literals
 import uuid
 from django.utils import simplejson as json
 from djangorestframework.views import View
-from djangorestframework.response import Response
-from djangorestframework import status
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from pymongo import Connection
 from easter.forms.event import EventForm
+from easter.views.code_response import CodeResponse
 
 import logging
 from datetime import datetime
@@ -18,20 +17,6 @@ from datetime import datetime
 from django.views.generic.base import TemplateView
 
 logger = logging.getLogger(__name__)
-
-err_codes = {
-  0: 'ok',
-  1: 'invalid params',
-  2: 'missing required param(s)',
-  3: 'app does not exist',
-  4: 'event quota exceeded',  #todo
-}
-
-class CodeResponse(Response):
-  def __init__(self, code=0, status=status.HTTP_200_OK, headers=None, new_tid=None):
-    self.new_tid = new_tid
-    content = {'code': code, 'msg': err_codes.get(code, '')}
-    super(CodeResponse, self).__init__(status, content, headers)
 
 class EventView(View):
   con = Connection()
@@ -92,7 +77,7 @@ class EventView(View):
     event = form['event']
     c_time = form['time']
     if not app_id in self.con.database_names():
-      return 3
+      return 101
     db = self.con[app_id]
     collections = db[event]
     s_time = datetime.now()
@@ -140,13 +125,13 @@ class EventView(View):
 
   def format_check(self, data, request):
     if not isinstance(data, dict):
-      return 1, 0
+      return 200, 0
     _data = data.get('data')
     if _data:
       data['data'] = json.dumps(_data).lower()
     form = EventForm(data, request)
     if not form.is_valid():
-      return 1, 0
+      return 200, 0
     return 0, form.cleaned_data
 
 class TestClientView(TemplateView):

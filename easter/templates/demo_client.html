@@ -2,11 +2,12 @@
 {% block head_more %}
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
     <style type="text/css">
-      label { display: inline-block; width: 50px; }
+      label { display: inline-block; width: 60px; }
+      .api_form { float:left; margin: 30px 0 0 70px; }
     </style>
 {% endblock %}
 {% block content %}
-  <form>
+  <form class="api_form">
     <p>
       <label for="app_id">app_id</label>
       <input type="text" id="app_id" value="test_app"/>
@@ -38,6 +39,35 @@
     <input type="button" id="upload" value="确定"/>
     <textarea rows="2" cols="50" id="response"></textarea>
   </form>
+  <form class="api_form">
+    <p>
+      <label for="q_app_id">app_id</label>
+      <input type="text" id="q_app_id" value="test_app"/>
+    </p>
+    <p>
+      <label for="app_token">app_token</label>
+      <input type="password" id="app_token" value="doN't_GuEss!"/>
+    </p>
+    <p>
+      <label for="q_event">event</label>
+      <input type="text" id="q_event" value="sns_share"/>
+    </p>
+    <p>
+      <label for="q_query">query</label>
+      <input type="text" id="q_query" value='{"uid": "ALL", "date": "2012-08-02"}'/>
+    </p>
+    <p>
+      <label for="q_order_by">order_by</label>
+      <input type="text" id="q_order_by" value='["-date"]'/>
+    </p>
+    <p>
+      <label for="q_fields">fields</label>
+      <input type="text" id="q_fields" value='{"BASIC": ""}'/>
+    </p>
+    <input type="button" id="query" value="查询"/>
+    <textarea rows="2" cols="50" id="q_response"></textarea>
+  </form>
+
 <script type="text/javascript">
   $(function() {
     $('#upload').click(function() {
@@ -50,11 +80,6 @@
         level: $('#level').val(),
         text: $('#text').val(),
         data: JSON.parse($('#data').val())
-//        data: {
-//          sns: 'weibo',
-//          board: 'board1',
-//          tags: ['tag1', 'tag2', 'tag3']
-//        }
       }; //JSON对象
 
       var json_str = JSON.stringify(json_obj);    //将JSON对象转变成JSON格式的字符串
@@ -63,6 +88,24 @@
 
     function callback(json){
       $('#response').html('code:' + json.code + '\tmsg:"' + json.msg + '"');
+    }
+
+    $('#query').click(function() {
+      var json_obj = {
+        app_id: $('#q_app_id').val(),
+        app_token: $('#app_token').val(),
+        event: $('#q_event').val(),
+        query: JSON.parse($('#q_query').val() || "{}"),
+        order_by: JSON.parse($('#q_order_by').val() || "[]"),
+        fields: JSON.parse($('#q_fields').val() || "{}")
+      }; //JSON对象
+
+      var json_str = JSON.stringify(json_obj);    //将JSON对象转变成JSON格式的字符串
+      $.post("/query/", json_str, q_callback, "json");
+    })
+
+    function q_callback(json){
+      $('#q_response').html('code:' + json.code + '\tmsg:"' + json.msg + '"');
     }
   })
 </script>
