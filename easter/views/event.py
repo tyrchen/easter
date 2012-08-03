@@ -36,7 +36,7 @@ class EventView(View):
     if request.method == 'POST':
       tid = new_tid or request.COOKIES.get('tid')
       if tid:
-        response.set_cookie(str('tid'), tid, max_age=86400)  #expire in a day
+        response.set_cookie(str('tid'), tid, max_age=86400)  #expire in a day. #let cookie key be str, not unicode!
     return response
 
   def record_user(self, request, form):
