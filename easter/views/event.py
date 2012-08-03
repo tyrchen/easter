@@ -50,14 +50,11 @@ class EventView(View):
 
     db = self.con[app_id]
     users = db._users
-    hid = self.build_hid(ip, tid)
-    if hid:
-      if uid:
-        users.update({'hid': hid}, {'$set': {'cookie': tid, 'ip': ip, 'uid': uid}}, upsert=True)
-      else:
-        users.update({'hid': hid}, {'$set': {'cookie': tid or new_tid, 'ip': ip}}, upsert=True)
+    hid = self.build_hid(ip, tid or new_tid)
+    if uid:
+      users.update({'hid': hid}, {'$set': {'cookie': tid, 'ip': ip, 'uid': uid}}, upsert=True)
     else:
-      logger.info('can not distinguish user')
+      users.update({'hid': hid}, {'$set': {'cookie': tid or new_tid, 'ip': ip}}, upsert=True)
     return hid, new_tid
 
   def build_hid(self, ip, tid):
