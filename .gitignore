@@ -46,3 +46,6 @@ easter/migrations/*
 
 #tmp
 tmp/*
+
+#logs
+logs/*
