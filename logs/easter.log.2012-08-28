@@ -1,0 +1,350 @@
+INFO 2012-08-28 09:52:57,093 engines local variable 'using_hours' referenced before assignment
+INFO 2012-08-28 09:55:38,669 engines u'date'
+INFO 2012-08-28 09:59:56,645 engines 75 u'date' 
+INFO 2012-08-28 10:00:48,366 engines 77 u'date' 
+INFO 2012-08-28 10:01:57,294 engines 77 u'date' 
+INFO 2012-08-28 10:03:00,350 engines 77 unsupported operand type(s) for +=: 'dict' and 'int' 
+INFO 2012-08-28 10:03:27,270 engines 77 unsupported operand type(s) for +=: 'int' and 'datetime.datetime' 
+INFO 2012-08-28 10:17:17,262 engines 77 unsupported operand type(s) for /: 'datetime.timedelta' and 'int' 
+INFO 2012-08-28 10:17:30,974 engines 77 'float' object is not iterable 
+INFO 2012-08-28 10:17:45,126 engines 77 'int' object is not iterable 
+INFO 2012-08-28 10:27:40,070 engines 77 unsupported operand type(s) for /: 'builtin_function_or_method' and 'int' 
+INFO 2012-08-28 11:12:21,778 views 25 expected string or buffer 
+INFO 2012-08-28 11:14:24,342 mongoable 43 Not Exists mongodb query {u'date': datetime.datetime(2012, 8, 28, 0, 0)} 
+INFO 2012-08-28 11:14:24,370 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 11, 14, 23)} 
+INFO 2012-08-28 11:31:14,360 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 11, 31, 14, 359404)} 
+INFO 2012-08-28 14:17:08,242 models 259 Not Exists mongodb query {u'user_hash': '9ea7927f6fbe13ed87333d828861d142'} 
+INFO 2012-08-28 14:17:08,243 mongoable 43 Not Exists mongodb query {u'date': datetime.datetime(2012, 8, 28, 0, 0)} 
+INFO 2012-08-28 14:17:08,243 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 14, 17, 8, 242843)} 
+INFO 2012-08-28 14:17:16,894 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 14, 17, 16, 893283)} 
+INFO 2012-08-28 14:17:36,966 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 14, 17, 36, 965306)} 
+INFO 2012-08-28 14:17:41,822 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 14, 17, 41, 821259)} 
+INFO 2012-08-28 14:17:50,270 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 14, 17, 50, 269381)} 
+INFO 2012-08-28 14:17:56,333 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 14, 17, 56, 333207)} 
+INFO 2012-08-28 14:18:01,277 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 14, 18, 1, 277190)} 
+INFO 2012-08-28 14:18:03,622 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 14, 18, 3, 621289)} 
+INFO 2012-08-28 14:18:23,150 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 14, 18, 23, 149345)} 
+INFO 2012-08-28 14:18:35,110 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 14, 18, 35, 109619)} 
+INFO 2012-08-28 14:18:44,205 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 14, 18, 44, 205262)} 
+INFO 2012-08-28 14:18:47,133 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 14, 18, 47, 133161)} 
+INFO 2012-08-28 14:18:58,118 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 14, 18, 58, 117394)} 
+INFO 2012-08-28 14:22:17,298 mongoable 43 Not Exists mongodb query {u'date': datetime.datetime(2012, 8, 27, 0, 0)} 
+INFO 2012-08-28 14:22:17,299 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 5, 0)} 
+INFO 2012-08-28 14:23:31,717 mongoable 43 Not Exists mongodb query {u'date': datetime.datetime(2012, 8, 23, 0, 0)} 
+INFO 2012-08-28 14:23:31,717 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 15, 0)} 
+INFO 2012-08-28 14:23:46,853 mongoable 43 Not Exists mongodb query {u'date': datetime.datetime(2012, 8, 25, 0, 0)} 
+INFO 2012-08-28 14:23:46,853 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 0, 0)} 
+INFO 2012-08-28 14:23:53,038 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 13, 0)} 
+INFO 2012-08-28 14:24:03,773 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 13, 0)} 
+INFO 2012-08-28 14:24:09,229 mongoable 43 Not Exists mongodb query {u'date': datetime.datetime(2012, 8, 26, 0, 0)} 
+INFO 2012-08-28 14:24:09,230 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 16, 0)} 
+INFO 2012-08-28 14:24:15,317 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 7, 0)} 
+INFO 2012-08-28 14:24:29,694 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 5, 0)} 
+INFO 2012-08-28 14:24:33,142 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 7, 0)} 
+INFO 2012-08-28 14:24:38,877 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 18, 0)} 
+INFO 2012-08-28 14:52:10,430 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 19, 0)} 
+INFO 2012-08-28 14:52:12,070 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 16, 0)} 
+INFO 2012-08-28 14:52:13,437 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 12, 0)} 
+INFO 2012-08-28 14:52:14,647 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 15, 0)} 
+INFO 2012-08-28 14:52:17,909 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 23, 0)} 
+INFO 2012-08-28 14:52:19,463 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 12, 0)} 
+INFO 2012-08-28 14:52:21,621 mongoable 43 Not Exists mongodb query {u'date': datetime.datetime(2012, 8, 24, 0, 0)} 
+INFO 2012-08-28 14:52:21,622 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 21, 0)} 
+INFO 2012-08-28 14:52:22,869 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 18, 0)} 
+INFO 2012-08-28 14:56:54,334 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 18, 0)} 
+INFO 2012-08-28 14:56:54,339 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 22, 0)} 
+INFO 2012-08-28 14:56:54,344 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 0, 0)} 
+INFO 2012-08-28 14:56:54,350 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 12, 0)} 
+INFO 2012-08-28 14:56:54,356 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 3, 0)} 
+INFO 2012-08-28 14:56:54,361 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 19, 0)} 
+INFO 2012-08-28 14:56:54,367 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 18, 0)} 
+INFO 2012-08-28 14:56:54,373 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 5, 0)} 
+INFO 2012-08-28 14:56:54,378 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 11, 0)} 
+INFO 2012-08-28 14:56:54,383 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 6, 0)} 
+INFO 2012-08-28 14:56:54,388 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 6, 0)} 
+INFO 2012-08-28 14:56:54,393 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 2, 0)} 
+INFO 2012-08-28 14:56:54,398 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 17, 0)} 
+INFO 2012-08-28 14:56:54,412 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 6, 0)} 
+INFO 2012-08-28 14:56:54,418 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 13, 0)} 
+INFO 2012-08-28 14:56:54,424 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 3, 0)} 
+INFO 2012-08-28 14:56:54,429 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 15, 0)} 
+INFO 2012-08-28 14:56:54,437 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 21, 0)} 
+INFO 2012-08-28 14:56:54,442 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 8, 0)} 
+INFO 2012-08-28 14:56:54,447 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 15, 0)} 
+INFO 2012-08-28 14:56:54,452 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 14, 0)} 
+INFO 2012-08-28 14:56:54,458 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 10, 0)} 
+INFO 2012-08-28 14:56:54,466 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 4, 0)} 
+INFO 2012-08-28 14:56:54,471 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 20, 0)} 
+INFO 2012-08-28 14:56:54,477 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 11, 0)} 
+INFO 2012-08-28 14:56:54,487 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 20, 0)} 
+INFO 2012-08-28 14:56:54,492 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 2, 0)} 
+INFO 2012-08-28 14:56:54,500 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 23, 0)} 
+INFO 2012-08-28 14:56:54,506 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 22, 0)} 
+INFO 2012-08-28 14:56:54,511 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 22, 0)} 
+INFO 2012-08-28 14:56:54,516 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 13, 0)} 
+INFO 2012-08-28 14:56:54,521 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 9, 0)} 
+INFO 2012-08-28 14:56:54,528 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 2, 0)} 
+INFO 2012-08-28 14:56:54,534 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 8, 0)} 
+INFO 2012-08-28 14:56:54,543 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 23, 0)} 
+INFO 2012-08-28 14:56:54,549 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 10, 0)} 
+INFO 2012-08-28 14:56:54,560 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 3, 0)} 
+INFO 2012-08-28 14:56:54,565 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 17, 0)} 
+INFO 2012-08-28 14:56:54,587 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 14, 0)} 
+INFO 2012-08-28 14:56:54,593 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 11, 0)} 
+INFO 2012-08-28 14:56:54,598 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 12, 0)} 
+INFO 2012-08-28 14:56:54,608 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 9, 0)} 
+INFO 2012-08-28 14:56:54,614 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 9, 0)} 
+INFO 2012-08-28 14:56:54,620 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 6, 0)} 
+INFO 2012-08-28 14:56:54,636 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 22, 0)} 
+INFO 2012-08-28 14:56:54,641 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 15, 0)} 
+INFO 2012-08-28 14:56:54,648 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 3, 0)} 
+INFO 2012-08-28 14:56:54,659 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 20, 0)} 
+INFO 2012-08-28 14:56:54,665 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 0, 0)} 
+INFO 2012-08-28 14:56:54,688 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 1, 0)} 
+INFO 2012-08-28 14:56:54,693 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 4, 0)} 
+INFO 2012-08-28 14:56:54,698 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 17, 0)} 
+INFO 2012-08-28 14:56:54,715 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 13, 0)} 
+INFO 2012-08-28 14:56:54,720 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 21, 0)} 
+INFO 2012-08-28 14:56:54,726 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 6, 0)} 
+INFO 2012-08-28 14:56:54,731 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 14, 0)} 
+INFO 2012-08-28 14:56:54,743 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 14, 0)} 
+INFO 2012-08-28 14:56:54,754 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 1, 0)} 
+INFO 2012-08-28 14:56:54,759 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 4, 0)} 
+INFO 2012-08-28 14:56:54,772 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 16, 0)} 
+INFO 2012-08-28 14:56:54,782 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 9, 0)} 
+INFO 2012-08-28 14:56:54,788 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 7, 0)} 
+INFO 2012-08-28 14:56:54,809 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 4, 0)} 
+INFO 2012-08-28 14:56:54,819 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 1, 0)} 
+INFO 2012-08-28 14:56:54,848 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 9, 0)} 
+INFO 2012-08-28 14:56:54,870 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 12, 0)} 
+INFO 2012-08-28 14:56:54,887 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 23, 0)} 
+INFO 2012-08-28 14:56:54,899 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 17, 0)} 
+INFO 2012-08-28 14:56:54,923 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 4, 0)} 
+INFO 2012-08-28 14:56:54,930 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 21, 0)} 
+INFO 2012-08-28 14:56:54,935 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 19, 0)} 
+INFO 2012-08-28 14:56:54,940 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 10, 0)} 
+INFO 2012-08-28 14:56:54,945 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 3, 0)} 
+INFO 2012-08-28 14:56:54,951 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 8, 0)} 
+INFO 2012-08-28 14:56:54,985 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 7, 0)} 
+INFO 2012-08-28 14:56:55,018 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 7, 0)} 
+INFO 2012-08-28 14:56:55,033 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 21, 0)} 
+INFO 2012-08-28 14:56:55,061 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 10, 0)} 
+INFO 2012-08-28 14:56:55,078 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 0, 0)} 
+INFO 2012-08-28 14:56:55,089 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 5, 0)} 
+INFO 2012-08-28 14:56:55,099 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 9, 0)} 
+INFO 2012-08-28 14:56:55,122 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 4, 0)} 
+INFO 2012-08-28 14:56:55,127 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 2, 0)} 
+INFO 2012-08-28 14:56:55,145 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 0, 0)} 
+INFO 2012-08-28 14:56:55,160 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 15, 0)} 
+INFO 2012-08-28 14:56:55,173 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 1, 0)} 
+INFO 2012-08-28 14:56:55,217 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 3, 0)} 
+INFO 2012-08-28 14:56:55,222 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 19, 0)} 
+INFO 2012-08-28 14:56:55,235 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 18, 0)} 
+INFO 2012-08-28 14:56:55,268 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 23, 0)} 
+INFO 2012-08-28 14:56:55,290 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 11, 0)} 
+INFO 2012-08-28 14:56:55,307 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 16, 0)} 
+INFO 2012-08-28 14:56:55,373 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 10, 0)} 
+INFO 2012-08-28 14:56:55,452 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 8, 0)} 
+INFO 2012-08-28 14:56:55,463 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 5, 0)} 
+INFO 2012-08-28 14:56:55,542 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 2, 0)} 
+INFO 2012-08-28 14:56:55,579 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 1, 0)} 
+INFO 2012-08-28 14:56:55,590 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 13, 0)} 
+INFO 2012-08-28 14:56:55,597 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 20, 0)} 
+INFO 2012-08-28 14:56:55,712 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 23, 0)} 
+INFO 2012-08-28 14:56:55,763 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 17, 0)} 
+INFO 2012-08-28 14:56:55,797 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 6, 0)} 
+INFO 2012-08-28 14:56:55,802 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 5, 0)} 
+INFO 2012-08-28 14:56:55,815 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 8, 0)} 
+INFO 2012-08-28 14:56:55,820 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 0, 0)} 
+INFO 2012-08-28 14:56:55,873 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 16, 0)} 
+INFO 2012-08-28 14:56:55,931 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 7, 0)} 
+INFO 2012-08-28 14:56:55,950 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 2, 0)} 
+INFO 2012-08-28 14:56:55,960 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 19, 0)} 
+INFO 2012-08-28 14:56:56,043 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 1, 0)} 
+INFO 2012-08-28 14:56:56,049 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 19, 0)} 
+INFO 2012-08-28 14:56:56,100 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 23, 20, 0)} 
+INFO 2012-08-28 14:56:56,270 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 12, 0)} 
+INFO 2012-08-28 14:56:56,336 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 14, 0)} 
+INFO 2012-08-28 14:56:56,353 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 17, 0)} 
+INFO 2012-08-28 14:56:56,461 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 8, 0)} 
+INFO 2012-08-28 14:56:56,520 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 21, 0)} 
+INFO 2012-08-28 14:56:56,641 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 20, 0)} 
+INFO 2012-08-28 14:56:56,858 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 18, 0)} 
+INFO 2012-08-28 14:56:56,878 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 27, 16, 0)} 
+INFO 2012-08-28 14:56:57,318 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 25, 11, 0)} 
+INFO 2012-08-28 14:56:57,545 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 11, 0)} 
+INFO 2012-08-28 14:56:57,787 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 24, 14, 0)} 
+INFO 2012-08-28 14:56:57,966 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 26, 10, 0)} 
+INFO 2012-08-28 14:56:58,398 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 28, 22, 0)} 
+INFO 2012-08-28 15:50:38,867 engines 74 'bool' object is not iterable 
+INFO 2012-08-28 15:52:45,027 engines 74 'bool' object is not iterable 
+INFO 2012-08-28 15:55:42,507 engines 74 'bool' object is not iterable 
+INFO 2012-08-28 16:20:52,734 connectionpool 191 Starting new HTTP connection (1): 127.0.0.1 
+ERROR 2012-08-28 16:20:52,805 base 215 Internal Server Error: /api/v1/event/ 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 48, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/toureet/.virtualenvs/simida/local/lib/python2.7/site-packages/djangorestframework/views.py", line 234, in dispatch
+    response_obj = handler(request, *args, **kwargs)
+  File "/home/toureet/project/simida/easter/views.py", line 38, in get
+    ip = request['REMOTE_ADDR']
+TypeError: 'WSGIRequest' object is not subscriptable
+INFO 2012-08-28 16:26:23,927 connectionpool 191 Starting new HTTP connection (1): 127.0.0.1 
+ERROR 2012-08-28 16:26:24,000 base 215 Internal Server Error: /api/v1/event/ 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 48, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/toureet/.virtualenvs/simida/local/lib/python2.7/site-packages/djangorestframework/views.py", line 234, in dispatch
+    response_obj = handler(request, *args, **kwargs)
+  File "/home/toureet/project/simida/easter/views.py", line 38, in get
+    ip = request['REMOTE_ADDR']
+TypeError: 'WSGIRequest' object is not subscriptable
+INFO 2012-08-28 16:27:36,588 connectionpool 191 Starting new HTTP connection (1): 127.0.0.1 
+ERROR 2012-08-28 16:27:36,660 base 215 Internal Server Error: /api/v1/event/ 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 48, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/toureet/.virtualenvs/simida/local/lib/python2.7/site-packages/djangorestframework/views.py", line 234, in dispatch
+    response_obj = handler(request, *args, **kwargs)
+  File "/home/toureet/project/simida/easter/views.py", line 38, in get
+    ip = request['REMOTE_ADDR']
+TypeError: 'WSGIRequest' object is not subscriptable
+INFO 2012-08-28 16:29:27,900 connectionpool 191 Starting new HTTP connection (1): 127.0.0.1 
+ERROR 2012-08-28 16:29:27,972 base 215 Internal Server Error: /api/v1/event/ 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 48, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/toureet/.virtualenvs/simida/local/lib/python2.7/site-packages/djangorestframework/views.py", line 234, in dispatch
+    response_obj = handler(request, *args, **kwargs)
+  File "/home/toureet/project/simida/easter/views.py", line 39, in get
+    ip = request['REMOTE_ADDR']
+TypeError: 'WSGIRequest' object is not subscriptable
+INFO 2012-08-28 16:29:51,292 connectionpool 191 Starting new HTTP connection (1): 127.0.0.1 
+ERROR 2012-08-28 16:29:51,368 base 215 Internal Server Error: /api/v1/event/ 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 48, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/toureet/.virtualenvs/simida/local/lib/python2.7/site-packages/djangorestframework/views.py", line 234, in dispatch
+    response_obj = handler(request, *args, **kwargs)
+  File "/home/toureet/project/simida/easter/views.py", line 39, in get
+    ip = request['REMOTE_ADDR']
+TypeError: 'WSGIRequest' object is not subscriptable
+INFO 2012-08-28 16:30:30,765 connectionpool 191 Starting new HTTP connection (1): 127.0.0.1 
+INFO 2012-08-28 16:30:30,836 views 50 No JSON object could be decoded 
+INFO 2012-08-28 16:35:09,548 connectionpool 191 Starting new HTTP connection (1): 127.0.0.1 
+INFO 2012-08-28 16:35:09,620 views 52 No JSON object could be decoded 
+INFO 2012-08-28 16:36:34,396 connectionpool 191 Starting new HTTP connection (1): 127.0.0.1 
+INFO 2012-08-28 16:36:55,807 connectionpool 191 Starting new HTTP connection (1): 127.0.0.1 
+INFO 2012-08-28 16:43:15,069 engines 83 'unicode' object has no attribute 'pop' 
+ERROR 2012-08-28 17:18:51,476 base 215 Internal Server Error: /api/v1/user/ 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 298, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/toureet/project/simida/simida/urls.py", line 8, in <module>
+    url(r'^api/', include('easter.urls')),
+  File "/usr/local/lib/python2.7/dist-packages/django/conf/urls/__init__.py", line 24, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/toureet/project/simida/easter/urls.py", line 11, in <module>
+    url(r'^v1/user/$', view=UserEventsView.as_vieww(), name='user_event')
+AttributeError: type object 'UserEventsView' has no attribute 'as_vieww'
+ERROR 2012-08-28 17:19:33,352 base 215 Internal Server Error: /api/v1/user/ 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 48, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/toureet/.virtualenvs/simida/local/lib/python2.7/site-packages/djangorestframework/views.py", line 234, in dispatch
+    response_obj = handler(request, *args, **kwargs)
+  File "/home/toureet/project/simida/easter/views.py", line 72, in get
+    return json_response(info)
+  File "/home/toureet/project/simida/easter/utils/http.py", line 11, in json_response
+    return HttpResponse(json.dumps(info),
+  File "/usr/lib/python2.7/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python2.7/json/encoder.py", line 201, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python2.7/json/encoder.py", line 264, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python2.7/json/encoder.py", line 178, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: ObjectId('503c6bb61d0e8725f9000000') is not JSON serializable
+ERROR 2012-08-28 17:22:35,742 base 215 Internal Server Error: /api/v1/user/ 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 48, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/toureet/.virtualenvs/simida/local/lib/python2.7/site-packages/djangorestframework/views.py", line 234, in dispatch
+    response_obj = handler(request, *args, **kwargs)
+  File "/home/toureet/project/simida/easter/views.py", line 72, in get
+    return json_response(info)
+  File "/home/toureet/project/simida/easter/utils/http.py", line 11, in json_response
+    return HttpResponse(json.dumps(info),
+  File "/usr/lib/python2.7/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python2.7/json/encoder.py", line 201, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python2.7/json/encoder.py", line 264, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python2.7/json/encoder.py", line 178, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <pymongo.cursor.Cursor object at 0x7fbf303731d0> is not JSON serializable
+ERROR 2012-08-28 17:23:25,856 base 215 Internal Server Error: /api/v1/user/ 
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 48, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 77, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/toureet/.virtualenvs/simida/local/lib/python2.7/site-packages/djangorestframework/views.py", line 234, in dispatch
+    response_obj = handler(request, *args, **kwargs)
+  File "/home/toureet/project/simida/easter/views.py", line 72, in get
+    return json_response(info)
+  File "/home/toureet/project/simida/easter/utils/http.py", line 11, in json_response
+    return HttpResponse(json.dumps(info),
+  File "/usr/lib/python2.7/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python2.7/json/encoder.py", line 201, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python2.7/json/encoder.py", line 264, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python2.7/json/encoder.py", line 178, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: datetime.datetime(2012, 8, 27, 18, 0) is not JSON serializable
+INFO 2012-08-28 17:32:09,079 mongoable 43 Not Exists mongodb query {u'date': datetime.datetime(2012, 8, 30, 0, 0)} 
+INFO 2012-08-28 17:32:09,080 mongoable 43 Not Exists mongodb query {u'uid': u'simida', u'datetime': datetime.datetime(2012, 8, 30, 17, 32, 8)} 

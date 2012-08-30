@@ -1,4 +1,2 @@
-easter
-====
-
-Easter is an internal project for tukeq.com for tracking user behavior.
+TODO：
+1. 自定义异常应该更好的封装。类相关的异常跟类走，在类中定义。全局异常在utils中写。

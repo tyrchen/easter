@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
+# __author__ = chenchiyuan
+
+from __future__ import division, unicode_literals, print_function
 
 from django.contrib import admin
-from easter.models.accounts import UserProfile
+from easter.models import Event
 
-admin.site.register(UserProfile)
+class EventAdmin(admin.ModelAdmin):
+  pass
 
-
-
+admin.site.register(Event, EventAdmin)
