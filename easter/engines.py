@@ -51,7 +51,7 @@ class EventPostEngine(object):
     uid = self.authentication(user_info)
 
     for event in events:
-      collection_name = event.get('collection_name', '')
+      collection_name = event.get('event_name', '')
       cls_info = RegisteredEvents.get_by_name(app_name, collection_name)
       self.do_event(cls_info=cls_info, uid=uid, event=event)
 
@@ -102,7 +102,7 @@ class QueryGetEngine(object):
       return info
 
   def do_query(self, app_name, query, fields, **kwargs):
-    collection_name = query.pop('collection_name', '')
+    collection_name = query.pop('event_name', '')
     from_datetime = query.pop('from_datetime', '')
     to_datetime = query.pop('to_datetime', '')
 

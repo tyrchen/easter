@@ -20,14 +20,14 @@ from easter.collections import RegisteredEvents
 """
 
 app_name = 'cayman'
-collection_name = 'create_clip'
+event_name = 'create_clip'
 
 record_time_fields = ['uid__board']
 record_total_fields = ['total', {'origin': {'0': 'ipad', '1': 'web', '2': 'iphone'}}]
 unique_fields = ['date']
 fields_to_db = []
 event_pull_fields = ['text']
-alias = {'board': 'b', 'uid': 'u', 'total': 't', 'iphone': 'i'}
+alias = {'board': 'b', 'uid': 'u', 'total': 't', 'iphone': 'i', }
 indexes = [(dict.fromkeys(unique_fields, 1), {'unique': True}), ]
 
 
@@ -35,7 +35,7 @@ class Command(BaseCommand):
   help = "通过配置来注册事件"
 
   def handle(self, *args, **options):
-    r = RegisteredEvents(event_app=app_name, event_collection=collection_name, time_stat=record_time_fields,
+    r = RegisteredEvents(event_app=app_name, event_name=event_name, time_stat=record_time_fields,
                          total_stat=record_total_fields, event_unique=unique_fields, event_fields_to_db=fields_to_db,
                          event_fields_to_feeds=event_pull_fields, event_indexes=indexes, event_alias=alias)
     r.save()

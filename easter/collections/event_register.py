@@ -25,11 +25,11 @@ class RegisteredEvents(Mongoable):
   unique_fields = ['event_app', 'event_collection']
   indexes = [(dict.fromkeys(unique_fields, 1), {'unique': True}), ]
 
-  def __init__(self, event_app, event_collection, time_stat=[],
+  def __init__(self, event_app, event_name, time_stat=[],
                total_stat=[], event_unique=[], event_fields_to_db=[],
                event_fields_to_feeds=[], event_indexes=[], event_alias={}):
     self.event_app = event_app
-    self.event_collection = event_collection
+    self.event_name = event_name
     self.time_stat = time_stat
     self.total_stat = total_stat
     self.event_unique = event_unique
@@ -39,8 +39,8 @@ class RegisteredEvents(Mongoable):
     self.event_alias = event_alias
 
   @classmethod
-  def get_by_name(cls, event_app, event_collection):
-    json_data = cls.get_one_query({'event_app': event_app, 'event_collection': event_collection})
+  def get_by_name(cls, event_app, event_name):
+    json_data = cls.get_one_query({'event_app': event_app, 'event_name': event_name})
     if not json_data:
       raise NotExistsException("Not exists app_name %s, collection_name %s" %(event_app, event_collection))
 
@@ -51,7 +51,7 @@ class RegisteredEvents(Mongoable):
   @classmethod
   def format_data(cls, json_data):
     app_name = json_data['event_app']
-    collection_name = json_data['event_collection']
+    collection_name = json_data['event_name']
     record_time_fields = json_data.get('time_stat', [])
     record_total_fields = json_data.get('total_stat', [])
     unique_fields = json_data.get('event_unique', [])
