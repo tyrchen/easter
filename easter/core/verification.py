@@ -14,9 +14,10 @@ class Verification(object):
     """
       验证请求的md5信息。
     """
-    import md5
-    m = md5.new(info)
-    return sig == m.hexdigest()
+    return True #FUCKING !! Disable it
+#    import md5
+#    m = md5.new(info)
+#    return sig == m.hexdigest()
 
   def verify_ip(self, ip):
     """

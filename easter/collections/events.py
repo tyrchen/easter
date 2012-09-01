@@ -59,6 +59,19 @@ class EventHandler(BaseRecord, TimeStatistics, TotalStatistics):
     kwargs.pop('uid', '')
     kwargs.pop('date', '')
     self.__dict__.update(kwargs)
+    self.init_hook()
+
+  def init_hook(self):
+    """
+      实例化一些额外的字段。比如事件的总体统计信息等。
+      现在默认统计两个字段，事件的总计和事件的触发时间统计。
+    """
+    if 'event_total' not in self.record_total_fields:
+      self.record_total_fields.append('event_total')
+    if 'total' not in self.time_record_fields():
+      self.record_time_fields.append('total')
+    if not hasattr(self, 'origin'):
+      self.origin = '0'
 
   def dict_to_db(self):
     record_dict = {}

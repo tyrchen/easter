@@ -42,7 +42,7 @@ class RegisteredEvents(Mongoable):
   def get_by_name(cls, event_app, event_name):
     json_data = cls.get_one_query({'event_app': event_app, 'event_name': event_name})
     if not json_data:
-      raise NotExistsException("Not exists app_name %s, collection_name %s" %(event_app, event_collection))
+      raise NotExistsException("Not exists app_name %s, collection_name %s" %(event_app, event_name))
 
     data = cls.format_data(json_data)
     return data

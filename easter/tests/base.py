@@ -12,7 +12,7 @@ import time
 import md5
 import json
 
-POST_URL = 'http://127.0.0.1:8000/api/v1/event/'
+POST_URL = 'http://127.0.0.1:8009/api/v1/event/'
 engine = EventPostEngine()
 
 app_name = 'cayman'
@@ -24,7 +24,7 @@ db_info = {
 anonymous_simida = {'uid': '', 'cookie': 'kimgee'}
 simida = {'uid': 'simida', 'cookie': 'kimgee'}
 
-event1 = {'collection_name': collection_name, 'clip': 'clip1', 'board': 'board1', 'origin': '1',
+event1 = {'event_name': collection_name, 'board': 'board1', 'origin': '1',
           'text': 'I love zixiao', 'datetime': py_time.now().strftime('%Y-%m-%d %H:%M:%S')}
 
 time.sleep(0.1)
@@ -123,6 +123,37 @@ def register_events_test():
   json_data = RegisteredEvents.get_by_name(event_app=app_name, event_collection=collection_name)
   print(json_data)
 
+def md5_sig(json_data):
+  m = md5.new(json.dumps(json_data))
+  sig = m.hexdigest()
+  return sig
+
+def post(app_name, user_info, events):
+  """
+      Post event data to log server.
+      :Params app_name str: The register app name.
+      :Params user_info dict:  It contains uid & cookie. Like {'uid': 'ccy', 'cookie': 'abcdef'}
+      :Params events list: It contains event info, likes event_name, origin, text, datetime etc
+      @return status_code: Like 200, 400, 403, 404, same as Http response status.
+    """
+  import requests
+  json_data = {
+      'app_name': app_name,
+      'user_info': user_info,
+      'events': events
+    }
+  sig = md5_sig(json_data)
+  info = {
+      'sig': sig,
+      'app_name': app_name,
+      'user_info': json.dumps(user_info),
+      'events': json.dumps(events)
+  }
+
+  headers = {'content-type': 'application/json'}
+  r = requests.post(url=POST_URL, data=json.dumps(info), headers=headers)
+  return r.status_code
+
 def http_test():
   json_data = {
     'app_name': app_name,
@@ -133,15 +164,4 @@ def http_test():
   sig = m.hexdigest()
   json_data.update({'sig': sig})
 
-  info = {
-    'sig': sig,
-    'app_name': app_name,
-    'user_info': json.dumps(anonymous_simida),
-    'events': json.dumps([event1,])
-  }
-
-  headers = {'content-type': 'application/json'}
-
-  import requests
-  r = requests.post(url=POST_URL, data=json.dumps(info), headers=headers)
-  print(r.status_code)
+  post(app_name, simida, [event1])

@@ -59,7 +59,6 @@ class EventPostEngine(object):
     '''
       对于每个事件的处理，实际调用了collection的record行为。
     '''
-
     handle = EventFactory.produce(cls_info)
     instance = handle(uid=uid, **event)
     instance.record()

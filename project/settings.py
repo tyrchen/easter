@@ -5,6 +5,7 @@ import os
 PROJECT_HOME = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../')
 # TRUST_IPS
 TRUST_IPS = [u'127.0.0.1',]
+EASTER_HOST = 'http://127.0.0.1:8009'
 
 #MONGO_DB
 MONGO_HOST = 'localhost'
