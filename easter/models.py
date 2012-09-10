@@ -11,11 +11,11 @@ from django.db.models.signals import post_save
 logger = logging.getLogger(__name__)
 
 class Event(models.Model):
-  '''
+  """
   事件的Django Model，目的只是为了admin.
   TODO：1. after save事件的处理。
-              2. 处理注册很困难的问题。
-  '''
+        2. 处理注册很困难的问题。
+  """
   class Meta:
     unique_together = ('app_name', 'collection_name')
 

@@ -27,13 +27,13 @@ class EventFactory(object):
     return e
 
 class EventHandler(BaseRecord, TimeStatistics, TotalStatistics):
-  '''
+  """
     module中最关键的一个collection.加入了BaseRecord, TimeStat, TotalStat Mixin。
     有两个主要作用：
     1. 基于总计统计某些行为。
     2. 基于时间轴(以小时为基数)来统计行为。
     我们采用注册的机制，只有注册的行为才能统计。不然请求会被返回。
-  '''
+  """
   app_name = ''
   collection_name = ''
 
@@ -156,7 +156,7 @@ class EventHandler(BaseRecord, TimeStatistics, TotalStatistics):
       delta = to_datetime - from_datetime
       return int(delta.total_seconds() / ONE_HOUR)
 
-    for field in fields: #初始化数组，给默认值
+    for _ in fields: #初始化数组，给默认值
       info = {}
       info['total'] = 0
       info["stats"] = [0 for i in range(total_hours(from_datetime, to_datetime))]
@@ -193,10 +193,10 @@ class EventHandler(BaseRecord, TimeStatistics, TotalStatistics):
       return days + 1
 
     infos = []
-    for field in fields:
+    for _ in fields:
       info = {}
       info["total"] = 0
-      info["stats"] = [0 for i in range(total_days(from_datetime, to_datetime))]
+      info["stats"] = [0 for __ in range(total_days(from_datetime, to_datetime))]
       infos.append(info)
 
     for cursor in cursors:

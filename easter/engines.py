@@ -16,15 +16,15 @@ import logging
 logger = logging.getLogger(__name__)
 
 class EventPostEngine(object):
-  '''
+  """
   处理过来的请求，可以认为是业务逻辑。
   TODO：考虑更好的抽象。
-  '''
+  """
   def execute(self, sig, app_name, user_info, events=[]):
-    '''
+    """
       执行逻辑，抛出异常，丢给执行端处理。
       动态添加验证方法。
-      '''
+    """
     json_data = {
       'app_name': app_name,
       'user_info': user_info,
@@ -56,9 +56,9 @@ class EventPostEngine(object):
       self.do_event(cls_info=cls_info, uid=uid, event=event)
 
   def do_event(self, uid, cls_info, event):
-    '''
+    """
       对于每个事件的处理，实际调用了collection的record行为。
-    '''
+    """
     handle = EventFactory.produce(cls_info)
     instance = handle(uid=uid, **event)
     instance.record()

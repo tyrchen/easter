@@ -9,9 +9,7 @@ from django.utils.encoding import smart_unicode
 
 class JsonField(models.TextField):
   __metaclass__ = models.SubfieldBase
-  '''
-  Need to determine the data struct
-  '''
+
   def __init__(self, *args, **kwargs):
     kwargs['default'] = kwargs.get('default', '')
     super(JsonField, self).__init__(*args, **kwargs)
