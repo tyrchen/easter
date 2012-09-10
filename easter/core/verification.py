@@ -13,6 +13,7 @@ class Verification(object):
   def verify_info(self, sig, info):
     """
       验证请求的md5信息。
+      TODO： 请求方式的改变，以字母排序，计算md5并验证。
     """
     return True #FUCKING !! Disable it
 #    import md5

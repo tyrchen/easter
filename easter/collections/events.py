@@ -9,8 +9,9 @@ from easter.mixins.time_stat import TimeStatistics
 from easter.mixins.total_stat import TotalStatistics
 from datetime import datetime as py_time, timedelta
 from easter.utils.helper import merge_dicts
-from easter.utils.util import using_hours, document_datetime
+from easter.utils.util import using_hours, document_datetime, datetime_to_str
 from easter.utils.util import to_datetime as str_to_datetime
+from easter.utils.helper import time_dict
 from django.conf import settings
 
 import logging
@@ -132,6 +133,12 @@ class EventHandler(BaseRecord, TimeStatistics, TotalStatistics):
 
   @classmethod
   def mget(cls, from_datetime=py_time.now(), to_datetime=py_time.now(), fields=[]):
+    #TODO 限定只查询一个字段，原因是不知道怎么展示多个字段
+    if not len(fields) == 1:
+      return {
+        'total': 0,
+        'stats': 0
+      }
     if isinstance(from_datetime, basestring):
       from_datetime = str_to_datetime(from_datetime)
     if isinstance(to_datetime, basestring):
@@ -149,35 +156,24 @@ class EventHandler(BaseRecord, TimeStatistics, TotalStatistics):
     from_yesterday = from_datetime - delta
     to_tomorrow = to_datetime + delta
     cursors = cls.get_by_query(query={'date': {'$gte': from_yesterday, '$lt': to_tomorrow}}, only=fields)
-    infos = []
+    infos = {
+      'total': 0,
+      'stats': time_dict(from_datetime, to_datetime, using='hours')
+    }
 
-    #WARING TODO: 可能出现跨小时问题。
-    def total_hours(from_datetime, to_datetime): #统计总共需要返回多少个小时
-      delta = to_datetime - from_datetime
-      return int(delta.total_seconds() / ONE_HOUR)
-
-    for _ in fields: #初始化数组，给默认值
-      info = {}
-      info['total'] = 0
-      info["stats"] = [0 for i in range(total_hours(from_datetime, to_datetime))]
-      infos.append(info)
-
-    # Fucking!!!Dirty code.
+    field = fields[0]
     for cursor in cursors:
       date = cursor['date']
-      for i, field in enumerate(fields): #迭代每个field
-        data = cursor.get(field, 0)
-        if isinstance(data, dict): #如果是dict，表明统计的是时间
-          for hour in data:
-            d_time = document_datetime(date, hour) #lazy的做法，将小时加上document的date，和请求时间比较
-            if not (d_time >= from_datetime and d_time <= to_datetime):
-              continue
-            infos[i]["total"] += data[hour]
-            which_hour = total_hours(from_datetime, d_time) #在返回值的具体位置上设置
-            infos[i]["stats"][which_hour] = data[hour]
-        else:
-          infos[i]["total"] += data
-          infos[i]["stats"] = data
+      data = cursor.get(field, 0)
+      if isinstance(data, dict):
+        for hour in data:
+          d_time = document_datetime(date, hour)
+          if not (d_time >= from_datetime and d_time <= to_datetime):
+            continue
+          infos["total"] += data[hour]
+          infos["stats"][datetime_to_str(d_time)] = data[hour]
+      else:
+        infos["total"] += data
     return infos
 
 
@@ -187,32 +183,34 @@ class EventHandler(BaseRecord, TimeStatistics, TotalStatistics):
     from_yesterday = from_datetime - delta
     to_tomorrow = to_datetime + delta
     cursors = cls.get_by_query(query={'date': {'$gte': from_yesterday, '$lt': to_tomorrow}}, only=fields)
-    def total_days(from_datetime, to_datetime):
-      delta = to_datetime - from_datetime
-      days = int(delta.total_seconds() / ONE_DAY) if not delta.total_seconds() < 0 else -1
-      return days + 1
 
-    infos = []
-    for _ in fields:
-      info = {}
-      info["total"] = 0
-      info["stats"] = [0 for __ in range(total_days(from_datetime, to_datetime))]
-      infos.append(info)
+    infos = {
+      "total": 0,
+      "stats": time_dict(from_datetime, to_datetime, using='days')
+    }
 
+    def which_date(datetime):
+      if datetime.date == from_datetime.date:
+        return datetime_to_str(from_datetime)
+      elif datetime.date == to_datetime.date:
+        return datetime_to_str(to_datetime)
+      else:
+        return datetime.strftime('%Y-%m-%d 00:00:00')
+
+    field = fields[0]
     for cursor in cursors:
       date = cursor['date']
-      for i, field in enumerate(fields):
-        data = cursor.get(field, 0)
-        total = 0
-        if isinstance(data, dict):
-          for hour in data:
-            d_time = document_datetime(date, hour)
-            if not (d_time >= from_datetime and d_time <= to_datetime):
-              continue
-            total += data[hour]
-        else:
-          total = data
-        which_day = total_days(from_datetime, date)
-        infos[i]['total'] += total
-        infos[i]['stats'][which_day] = total
+      data = cursor.get(field, 0)
+      total = 0
+      if isinstance(data, dict):
+        for hour in data:
+          d_time = document_datetime(date, hour)
+          if not (d_time >= from_datetime and d_time <= to_datetime):
+            continue
+          total += data[hour]
+      else:
+        total = data
+
+      infos['total'] += total
+      infos['stats'][which_date(date)] = total
     return infos
