@@ -60,7 +60,7 @@ register_list = [{
   'time_stat': ['uid__clip'],
   },{
   'event_name': 'create_clip',   #新建clip
-  'time_stat': ['uid__clip'],
+  'time_stat': ['uid__board'],
   }, {
   'event_name': 'modify_clip', #修改clip
   'time_stat': ['uid__clip'],
@@ -72,13 +72,13 @@ register_list = [{
   'time_stat': ['uid__clip'],
   },  {
   'event_name': 'create_board',   #新建board
-  'time_stat': ['uid__board'],
+  'time_stat': ['uid'],
   }, {
   'event_name': 'modify_board', #修改board
-  'time_stat': ['uid__clip'],
+  'time_stat': ['uid__board'],
   }, {
   'event_name': 'delete_board', #删除board
-  'time_stat': ['uid__clip'],
+  'time_stat': ['uid__board'],
   },
 ]
 

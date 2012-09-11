@@ -118,8 +118,8 @@ def query_test(from_datetime=2, to_datetime=2):
     'to_datetime': datetime_to_str(now + delta_day*to_datetime)
   }
   fields = [{
-    'uid': 'chiyuan',
-    'clip': 'blue'
+    'uid': '4',
+    'board':'27'
   }]
   info = engine.execute(ip=ip, app_name='cayman', query=query, fields=fields)
   return info
