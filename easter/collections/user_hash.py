@@ -18,8 +18,9 @@ class UserHashTable(Mongoable):
 
   class MD5Hash:
     def hexdigest(self, info):
-      import md5
-      m = md5.new(info)
+      import hashlib
+      m = hashlib.md5()
+      m.update(info)
       return m.hexdigest()
 
   @property

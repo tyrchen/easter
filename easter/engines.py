@@ -33,7 +33,7 @@ class EventPostEngine(object):
     v = Verification()
 
     try:
-      validate = all([v.verify_info(sig, json.dumps(json_data)),])
+      validate = all([v.verify_info(sig, json_data),])
     except Exception, err:
       logger.info(err)
       raise InfoIllegalException("参数不合法")
@@ -43,8 +43,7 @@ class EventPostEngine(object):
 
     try:
       self.do_events(app_name, user_info, events)
-    except Exception, err:
-      logger.info(err)
+    except Exception:
       raise InfoIllegalException("参数不合法")
 
   def do_events(self, app_name, user_info, events=[]):

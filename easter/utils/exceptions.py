@@ -3,9 +3,16 @@
 
 from __future__ import division, unicode_literals, print_function
 
-class NotExistsException(Exception):
+import traceback
+import logging
+
+logger = logging.getLogger(__name__)
+
+class PrintTraceBackException(Exception):
   def __init__(self, name):
+    super(PrintTraceBackException, self).__init__()
     self.name = name
+    logger.info("%s:\n%s" %(self.name, traceback.format_exc()))
 
   def __repr__(self):
     return self.__str__()
@@ -13,42 +20,17 @@ class NotExistsException(Exception):
   def __str__(self):
     return self.name.encode('utf-8')
 
-class MongoDBHandleException(Exception):
-  def __init__(self, handle):
-    self.handle = handle
+class NotExistsException(PrintTraceBackException):
+  pass
 
-  def __repr__(self):
-    return self.__str__()
+class MongoDBHandleException(PrintTraceBackException):
+  pass
 
-  def __str__(self):
-    return self.handle.encode('utf-8')
+class NothingException(PrintTraceBackException):
+  pass
 
-class NothingException(Exception):
-  def __init__(self, name):
-    self.name = name
+class SignitureException(PrintTraceBackException):
+  pass
 
-  def __repr__(self):
-    return self.__str__()
-
-  def __str__(self):
-    return self.name.encode('utf-8')
-
-class SignitureException(Exception):
-  def __init__(self, name):
-    self.name = name
-
-  def __repr__(self):
-    return self.__str__()
-
-  def __str__(self):
-    return self.name.encode('utf-8')
-
-class InfoIllegalException(Exception):
-  def __init__(self, name):
-    self.name = name
-
-  def __repr__(self):
-    return self.__str__()
-
-  def __str__(self):
-    return self.name.encode('utf-8')
+class InfoIllegalException(PrintTraceBackException):
+  pass

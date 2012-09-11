@@ -20,7 +20,7 @@ class EventView(View):
       sig = info.get('sig', '')
       app_name = info.get('app_name', '')
       user_info = json.loads(info.get('user_info', {}))
-      events = json.loads(info.get('events', {}))
+      events = json.loads(info.get('events', []))
     except Exception, err:
       logger.info(err)
       return http_400()
