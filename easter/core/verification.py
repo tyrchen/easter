@@ -5,8 +5,10 @@ from __future__ import division, unicode_literals, print_function
 from django.conf import settings
 
 import json
+import logging
 
 TRUST_IPS = settings.TRUST_IPS or ['127.0.0.1', ]
+logger  = logging.getLogger(__name__)
 
 class Verification(object):
   """
@@ -37,4 +39,5 @@ class Verification(object):
     """
       验证请求的ip信息。
     """
+    logger.info("Send ip %s " % ip)
     return bool((ip in TRUST_IPS))

@@ -50,7 +50,8 @@ class EventView(View):
     engine = QueryGetEngine()
     try:
       info = engine.execute(ip, app_name, query, fields)
-    except Exception:
+    except Exception, err:
+      logger.info(err)
       return http_403()
 
     return json_response(info)
