@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <title>途客圈统计系统</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="{% static 'vendors/bootstrap/css/bootstrap.min.css' %}" type="text/css" />
+  <link rel="stylesheet" href="{% static 'vendors/gridster/jquery.gridster.css' %}" type="text/css" />
+
+  {% block css %} {% endblock %}
+
+  {% block head_more %}{% endblock %}
+</head>
+<body>
+{% block content %} {% endblock %}
+
+<script type="text/javascript" src="{% static 'vendors/jquery-1.7.2.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'vendors/gridster/jquery.gridster.js' %}"></script>
+{% block script %}{% endblock %}
+
+</body>
+</html>

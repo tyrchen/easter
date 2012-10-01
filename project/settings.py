@@ -19,7 +19,7 @@ ONE_HOUR = 3600
 ONE_DAY = ONE_HOUR*24
 TIME_THRESHOLD = ONE_DAY*3
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -78,7 +78,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(PROJECT_HOME, 'static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -103,7 +103,7 @@ STATICFILES_FINDERS = (
 SECRET_KEY = 'bl75r1wvdo9ykqb+k-ks8)(js6dgz^$kbmfiqhx271^el5#pw4'
 
 # List of callables that know how to import templates from various sources.
-TEMPpassLATE_LOADERS = (
+TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
@@ -142,6 +142,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'easter',
+    'taiwan',
     'djangorestframework'
   )
 
