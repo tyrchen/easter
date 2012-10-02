@@ -134,6 +134,7 @@ class EventHandler(BaseRecord, TimeStatistics, TotalStatistics):
   @classmethod
   def mget(cls, from_datetime=py_time.now(), to_datetime=py_time.now(), fields=[]):
     #TODO 限定只查询一个字段，原因是不知道怎么展示多个字段
+    logger.info("fields %r" %fields)
     if not len(fields) == 1:
       return {
         'total': 0,

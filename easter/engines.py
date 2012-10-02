@@ -95,6 +95,7 @@ class QueryGetEngine(object):
       info = self.do_query(app_name, query, fields, **kwargs)
     except Exception, err:
       logger.info(err)
+
       raise InfoIllegalException("参数不合法")
     else:
       return info

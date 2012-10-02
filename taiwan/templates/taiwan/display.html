@@ -1,4 +1,5 @@
 {% extends 'taiwan/base.html' %}
+{% load static %}
 {% block content %}
   <div class="container">
   <section class="demo">
@@ -35,6 +36,8 @@
   </style>
 {% endblock %}
 {% block script %}
+  <script type="text/javascript" src="{% static 'assets/display.js' %}"></script>
+
   <script type="text/javascript">
     var gridster;
 

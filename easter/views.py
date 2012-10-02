@@ -37,8 +37,8 @@ class EventView(View):
   def get(self, request, *args, **kwargs):
     ip = request.META['REMOTE_ADDR']
     app_name = request.GET.get('app_name', '')
-    query = request.GET.get('query', '')
-    fields = request.GET.get('fields', '')
+    query = request.GET.get('query', '{}')
+    fields = request.GET.get('fields', '[]')
 
     try:
       query = json.loads(query)

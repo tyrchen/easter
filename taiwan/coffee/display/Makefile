@@ -4,7 +4,7 @@ TMP_JS = _${TARGET}.js
 COMPILER = coffee
 ASSET_PATH = ../../static/assets
 OUTPUT = ${ASSET_PATH}/${TARGET}.js
-FILENAMES = models controllers views
+FILENAMES = application helper controllers views
 FILES = $(patsubst %, %.coffee, $(FILENAMES))
 
 build:

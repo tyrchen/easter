@@ -7,7 +7,7 @@ from django.conf import settings
 import json
 import logging
 
-TRUST_IPS = settings.TRUST_IPS or ['127.0.0.1', ]
+TRUST_IPS = settings.TRUST_IPS or ['127.0.0.1']
 logger  = logging.getLogger(__name__)
 
 class Verification(object):
@@ -40,4 +40,5 @@ class Verification(object):
       验证请求的ip信息。
     """
     logger.info("Send ip %s " % ip)
+    #print('ip is %s, trust_ip: %s, is trust: %s' % (ip, TRUST_IPS, ip in TRUST_IPS))
     return bool((ip in TRUST_IPS))
