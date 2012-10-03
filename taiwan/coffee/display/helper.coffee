@@ -20,5 +20,14 @@ Stat.getCreateClipStat = (start, end, fields, callback) ->
   Stat.getJSON 'create_clip', start, end, fields, callback
 
 
+Stat.visualization = (data, type, title, node) ->
+  options = title: title
+  charts =
+    LineChart: (node) -> new google.visualization.LineChart(node)
+    PieChart: (node) -> new google.visualization.PieChart(node)
+    BarChart: (node) -> new google.visualization.BarChart(node)
+    ColumnChart: (node) -> new google.visualization.ColumnChart(node)
 
+  chart = charts[type](node)
+  chart.draw(data, options)
 
